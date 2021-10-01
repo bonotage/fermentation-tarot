@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/fermentation-tarot/static/css/main.958d6f77.chunk.css",
+    "main.css": "/fermentation-tarot/static/css/main.44b0b33c.chunk.css",
     "main.js": "/fermentation-tarot/static/js/main.76b093c7.chunk.js",
     "main.js.map": "/fermentation-tarot/static/js/main.76b093c7.chunk.js.map",
     "runtime-main.js": "/fermentation-tarot/static/js/runtime-main.373600c5.js",
@@ -8,13 +8,13 @@
     "static/js/2.b214860b.chunk.js": "/fermentation-tarot/static/js/2.b214860b.chunk.js",
     "static/js/2.b214860b.chunk.js.map": "/fermentation-tarot/static/js/2.b214860b.chunk.js.map",
     "index.html": "/fermentation-tarot/index.html",
-    "static/css/main.958d6f77.chunk.css.map": "/fermentation-tarot/static/css/main.958d6f77.chunk.css.map",
+    "static/css/main.44b0b33c.chunk.css.map": "/fermentation-tarot/static/css/main.44b0b33c.chunk.css.map",
     "static/js/2.b214860b.chunk.js.LICENSE.txt": "/fermentation-tarot/static/js/2.b214860b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.373600c5.js",
     "static/js/2.b214860b.chunk.js",
-    "static/css/main.958d6f77.chunk.css",
+    "static/css/main.44b0b33c.chunk.css",
     "static/js/main.76b093c7.chunk.js"
   ]
 }
