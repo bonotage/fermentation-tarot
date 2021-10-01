@@ -1,0 +1,496 @@
+// * {
+//   box-sizing: border-box;
+// }
+
+/* ------------------------------------ CARDS ---------------------------------------*/
+
+.title-text {
+  color: ivory;
+  /* background-color: lightcoral; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  font-size: 5em;
+  font-family: "Open Sans Condensed", sans-serif;
+  // filter: blur(1.5px);
+  // box-shadow: 0px 0px 0.2em 0.01em lemonchiffon;
+  filter: drop-shadow(0 0 10px white);
+}
+
+body {
+  background: #d0e0e6;
+  /* min-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 50px; */
+  margin-top: 1em;
+  line-height: 1;
+  /* font-family: "Patrick Hand", sans-serif; */
+}
+
+p {
+  text-align: right;
+  font-size: 5em;
+  color: #999;
+  margin-top: 0;
+  margin-bottom: 2em;
+  margin-right: 2em;
+}
+
+p strong {
+  font-size: 14px;
+  color: #777;
+}
+
+.cards {
+  display: grid;
+  grid-template: repeat(1, 1fr) / repeat(4, 1fr);
+  // margin-right: 2em;
+  // margin-left: 2em;
+  gap: 3em;
+  // position: absolute;
+  // top: 0;
+}
+
+.tarot-card {
+  height: 25em;
+  width: 15em;
+  border-radius: 2px;
+  background: #000;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.tarot-card.flipped .inner {
+  transform: rotateY(180deg);
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.6s cubic-bezier(0.38, 0.02, 0.09, 1.66) all;
+}
+
+.tarot-card .front,
+.tarot-card .back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.tarot-card .front {
+  // background: #fff;
+  background-color: ivory;
+  transform: rotateY(180deg);
+  box-shadow: 0px 0px 0.25em 0.05em lemonchiffon;
+}
+
+.tarot-card .back {
+  background: lightblue;
+  //  rgb(161, 195, 206);
+  /* background: #51dce0; */
+  /* color: #d6aeb5; */
+  font-size: 100px;
+  transition: 0.3s ease all;
+  box-shadow: 0px 0px 0.25em 0.05em lemonchiffon;
+}
+
+.tarot-card .back:hover {
+  background: lemonchiffon;
+  /* background: #dba8b1; */
+  /* color: #fff; */
+  transform: scale(1.02);
+}
+
+body {
+  background: white;
+  background-color: black;
+}
+
+.flame-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: black; */
+  /* background-color: pink; */
+  margin-top: 1em;
+  // margin-left: 5em;
+  // margin-right: 5em;
+  font-size: 3em;
+  /* #d6aeb5; */
+}
+
+.container {
+  /* background-color: antiquewhite; */
+  margin-right: 5em auto;
+  width: 0.6em;
+  height: 0.6em;
+  position: relative;
+  transform-origin: center bottom;
+  animation-name: flicker;
+  animation-duration: 3ms;
+  animation-delay: 200ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.flame {
+  bottom: 0;
+  position: absolute;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  transform: rotate(-45deg) scale(1.5, 1.5);
+  filter: drop-shadow(0 0 15px rgba(255, 166, 20, 0.6));
+}
+
+.yellow {
+  left: 0.15em;
+  width: 0.3em;
+  height: 0.3em;
+  background: gold;
+  box-shadow: 0px 0px 0.09em 0.04em gold;
+}
+
+.orange {
+  left: 0.1em;
+  width: 0.4em;
+  height: 0.4em;
+  background: orange;
+  box-shadow: 0px 0px 0.09em 0.04em orange;
+}
+
+.red {
+  left: 0.05em;
+  width: 0.5em;
+  height: 0.5em;
+  background: OrangeRed;
+  box-shadow: 0px 0px 0.05em 0.04em OrangeRed;
+}
+
+.white {
+  left: 0.15em;
+  bottom: -0.04em;
+  width: 0.3em;
+  height: 0.3em;
+  background: white;
+  box-shadow: 0px 0px 0.09em 0.04em white;
+}
+
+.circle {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.blue {
+  width: 0.1em;
+  height: 0.1em;
+  left: 0.25em;
+  bottom: -0.25em;
+  background: SlateBlue;
+  box-shadow: 0px 0px 0.15em 0.1em #1b2735;
+}
+
+.black {
+  width: 0.4em;
+  height: 0.4em;
+  left: 0.1em;
+  bottom: -0.6em;
+  background: black;
+  box-shadow: 0px 0px 0.15em 0.1em #090a0f;
+}
+
+@keyframes flicker {
+  0% {
+    transform: rotate(-1deg);
+  }
+  20% {
+    transform: rotate(1deg);
+  }
+  40% {
+    transform: rotate(-1deg);
+  }
+  60% {
+    transform: rotate(1deg) scaleY(1.04);
+  }
+  80% {
+    transform: rotate(-2deg) scaleY(0.92);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+/* ------------------------------------ FALLING SNOW ---------------------------------------*/
+
+.wrapper {
+  width: 1vw;
+  height: 1vh;
+  font-size: 5em;
+  left: -10em;
+  // background: yellow;
+  // margin-right: 5em;
+  // background-color: aquamarine;
+  // background: radial-gradient(
+  //   farthest-corner at 30vw 20vh,
+  //   #7397a1 1%,
+  //   #3f2c41 100%
+  // );
+}
+$s1: "";
+$s2: "";
+$s3: "";
+@for $i from 1 through 400 {
+  $s1: $s1 +
+    random(1000) *
+    0.1vw +
+    " " +
+    random(1000) *
+    0.1vh +
+    " " +
+    0 +
+    " " +
+    random(50) *
+    -0.01em +
+    #fff;
+  $s2: $s2 +
+    random(1000) *
+    0.1vw +
+    " " +
+    random(1000) *
+    0.1vh +
+    " " +
+    0 +
+    " " +
+    random(50) *
+    -0.01em +
+    #fff;
+  $s3: $s3 +
+    random(1000) *
+    0.1vw +
+    " " +
+    random(1000) *
+    0.1vh +
+    " " +
+    0 +
+    " " +
+    random(50) *
+    -0.01em +
+    #fff;
+  @if $i < 400 {
+    $s1: $s1 + ",";
+    $s2: $s2 + ",";
+    $s3: $s3 + ",";
+  }
+}
+// .snow {
+//   border-radius: 50%;
+//   opacity: 0.8;
+//   position: absolute;
+//   top: -100vh;
+//   animation-name: fall;
+//   animation-timing-function: linear;
+//   animation-iteration-count: infinite;
+// }
+// .layer1 {
+//   width: 0.15em;
+//   height: 0.15em;
+//   filter: blur(1.5px);
+//   box-shadow: #{$s1};
+//   animation-duration: 6s;
+
+//   // display: flex;
+//   // justify-content: center;
+//   // align-items: center;
+//   // color: red;
+// }
+// .layer1.a {
+//   animation-delay: -3s;
+
+//   // font-size: 3em;
+// }
+// .layer2 {
+//   width: 0.12em;
+//   height: 0.12em;
+//   filter: blur(3px);
+//   box-shadow: #{$s2};
+//   animation-duration: 8s;
+
+//   // display: flex;
+//   // justify-content: center;
+//   // align-items: center;
+//   // color: red;
+// }
+// .layer2.a {
+//   animation-delay: -4s;
+// }
+// .layer3 {
+//   width: 0.08em;
+//   height: 0.08em;
+//   filter: blur(6px);
+//   box-shadow: #{$s3};
+//   animation-duration: 10s;
+
+//   // display: flex;
+//   // justify-content: center;
+//   // align-items: center;
+//   // color: red;
+// }
+// .layer3.a {
+//   animation-delay: -5s;
+// }
+// @keyframes fall {
+//   70% {
+//     transform: translateY(200vh);
+//   }
+// }
+
+body {
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  // overflow: hidden;
+  // filter: drop-shadow(0 0 10px white);
+}
+
+@function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+}
+
+.snow {
+  $total: 200;
+  position: fixed;
+  left: 0;
+  top: -10em;
+
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px white);
+
+  @for $i from 1 through $total {
+    $random-x: random(1000000) * 0.0001vw;
+    $random-offset: random_range(-100000, 100000) * 0.0001vw;
+    $random-x-end: $random-x + $random-offset;
+    $random-x-end-yoyo: $random-x + ($random-offset / 2);
+    $random-yoyo-time: random_range(30000, 80000) / 100000;
+    $random-yoyo-y: $random-yoyo-time * 100vh;
+    $random-scale: random(10000) * 0.0001;
+    $fall-duration: random_range(10, 30) * 1s;
+    $fall-delay: random(30) * -1s;
+
+    &:nth-child(#{$i}) {
+      opacity: random(10000) * 0.0001;
+      transform: translate($random-x, -10px) scale($random-scale);
+      animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
+    }
+
+    @keyframes fall-#{$i} {
+      #{percentage($random-yoyo-time)} {
+        transform: translate($random-x-end, $random-yoyo-y) scale($random-scale);
+      }
+
+      to {
+        transform: translate($random-x-end-yoyo, 100vh) scale($random-scale);
+      }
+    }
+  }
+}
+
+/* ------------------------------------ SNOW ---------------------------------------*/
+
+.curved-div {
+  // background: #ff3c00;
+  margin-left: -20em;
+  margin-right: -20em;
+  margin-top: -8em;
+  color: #fff;
+  text-align: center;
+  // filter: blur(1.5px);
+  filter: drop-shadow(0 0 10px white);
+}
+
+.curved-div svg {
+  display: block;
+}
+
+// $d: 70; // density
+// $w: 600; // grid size
+// $s: 3s; // speed
+
+// // Generate the snow image using radial gradients
+// $grad: ();
+// @for $i from 0 to $d {
+//   $v: random(4) + 2;
+//   $a: random(5) * 0.1 + 0.5;
+//   $grad: $grad,
+//     radial-gradient(
+//       $v +
+//         px
+//         $v +
+//         px
+//         at
+//         (random($w - $v * 2) + $v) +
+//         px
+//         (random($w - $v * 2) + $v) +
+//         px,
+//       rgba(255, 255, 255, $a) 50%,
+//       rgba(0, 0, 0, 0)
+//     ) !global;
+// }
+
+// // The CSS
+// html {
+//   height: 100%;
+//   background: linear-gradient(#123 30%, #667);
+//   overflow: hidden;
+// }
+// .snow,
+// .snow:before,
+// .snow:after {
+//   position: absolute;
+//   top: -$w + px;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+//   background-image: $grad;
+//   background-size: $w + px $w + px;
+//   animation: snow $s linear infinite;
+//   content: "";
+// }
+// .snow:after {
+//   margin-left: -$w/3 + px;
+//   opacity: 0.4;
+//   animation-duration: $s * 2;
+//   animation-direction: reverse;
+//   filter: blur(3px);
+// }
+// .snow:before {
+//   animation-duration: $s * 3;
+//   animation-direction: reverse;
+//   margin-left: -$w/2 + px;
+//   opacity: 0.65;
+//   filter: blur(1.5px);
+// }
+// @keyframes snow {
+//   to {
+//     transform: translateY($w + px);
+//   }
+// }
