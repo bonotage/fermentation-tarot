@@ -1,5 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./styles.scss";
+
+const tarots_json = require("./tarots.json");
+var shuffle = require("shuffle-array"),
+  collection = tarots_json;
+
+shuffle(collection);
+// console.log(collection);
+
+// console.log(tarots_json.slice(tarots_json.length - 3));
+const tarots = tarots_json.slice(tarots_json.length - 3);
 // import tarot1 from "./tarot1.jpg";
 
 // references
@@ -14,19 +24,19 @@ export default function App() {
   const [openedCard, setOpenedCard] = useState([false, false, false, false]);
   // const [matched, setMatched] = useState([]);
 
-  const pokemons = [
-    { id: 1, name: "balbasaur" },
-    { id: 8, name: "wartotle" },
-    { id: 9, name: "blastoise" },
-    { id: 6, name: "charizard" },
-  ];
+  // const pokemons = [
+  //   { id: 1, name: "balbasaur" },
+  //   { id: 8, name: "wartotle" },
+  //   { id: 9, name: "blastoise" },
+  //   { id: 6, name: "charizard" },
+  // ];
 
-  const tarots = [
-    { id: 1, name: "cups" },
-    { id: 2, name: "wands" },
-    { id: 3, name: "pentacles" },
-    { id: 4, name: "swords" },
-  ];
+  // const tarots = [
+  //   { id: 1, name: "cups" },
+  //   { id: 2, name: "wands" },
+  //   { id: 3, name: "pentacles" },
+  //   // { id: 4, name: "swords" },
+  // ];
 
   //currently there are 4 pokemons but we need the pair
 
@@ -59,16 +69,15 @@ export default function App() {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Open+Sans+Condensed:wght@300&display=swap"
         rel="stylesheet"
-      />
+      ></link>
 
-      <div className="content-container">
-        {[...Array(150)].map((e, i) => (
-          <div className="snow" key={i}></div>
-        ))}
+      {[...Array(150)].map((e, i) => (
+        <div className="snow" key={i}></div>
+      ))}
 
-        {/* <div className="wrapper">
+      {/* <div className="wrapper">
           <div className="snow layer1 a"></div>
           <div className="snow layer1"></div>
           <div className="snow layer2 a"></div>
@@ -78,8 +87,9 @@ export default function App() {
           <div className="text-bg"></div>
         </div> */}
 
-        <div className="title-text">Reach for the past...</div>
-        {/* <div className="snow"></div> */}
+      <div className="title-text">Reach for the past...</div>
+      {/* <div className="snow"></div> */}
+      <div className="content-container">
         <div className="cards">
           {tarots.map((tarot, index) => {
             //lets flip the card
@@ -107,13 +117,21 @@ export default function App() {
                       width="200"
                     />
                   </div>
-                  <div className="back"></div>
+                  <div className="back">
+                    <div className="message-box">
+                      ~*~ <br /> <br />
+                      {tarot.message} <br /> <br />
+                      ~*~
+                    </div>
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
-        <div class="flame-container">
+      </div>
+      <div className="content-container">
+        <div className="flame-container">
           <div class="container">
             <div class="red flame"></div>
             <div class="orange flame"></div>
@@ -135,6 +153,11 @@ export default function App() {
       </div>
 
       <div class="curved-div">
+        {/* <img
+          src={`${process.env.PUBLIC_URL}/assets/left-foot.png`}
+          alt="left foot"
+          width="100"
+        /> */}
         <svg viewBox="0 0 1440 319">
           <path
             fill="#fff"
@@ -143,6 +166,8 @@ export default function App() {
           ></path>
         </svg>
       </div>
+
+      <footer> Fermentation Tarot</footer>
     </div>
   );
 }

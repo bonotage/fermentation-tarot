@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0.5em;
+  margin-top: 1em;
   margin-bottom: 1em;
   font-size: 5em;
   font-family: "Open Sans Condensed", sans-serif;
@@ -22,13 +22,19 @@
 body {
   background: #d0e0e6;
   /* min-height: 100vh; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   /* padding: 50px; */
   margin-top: 1em;
   line-height: 1;
   /* font-family: "Patrick Hand", sans-serif; */
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 p {
@@ -47,10 +53,20 @@ p strong {
 
 .cards {
   display: grid;
-  grid-template: repeat(1, 1fr) / repeat(4, 1fr);
+  grid-template: repeat(1, 1fr) / repeat(3, 1fr);
   // margin-right: 2em;
   // margin-left: 2em;
   gap: 3em;
+  // position: absolute;
+  // top: 0;
+}
+
+.cards-week {
+  display: grid;
+  grid-template: repeat(1, 1fr) / repeat(7, 1fr);
+  // margin-right: 2em;
+  // margin-left: 2em;
+  gap: 1em;
   // position: absolute;
   // top: 0;
 }
@@ -99,14 +115,30 @@ p strong {
   box-shadow: 0px 0px 0.25em 0.05em lemonchiffon;
 }
 
+.tarot-card .front img {
+  border: 3px solid #555;
+}
+
 .tarot-card .back {
   background: lightblue;
   //  rgb(161, 195, 206);
   /* background: #51dce0; */
   /* color: #d6aeb5; */
-  font-size: 100px;
+
   transition: 0.3s ease all;
   box-shadow: 0px 0px 0.25em 0.05em lemonchiffon;
+}
+
+.tarot-card .back .message-box {
+  display: flex;
+  // text-align: center;
+  font-family: "Annie Use Your Telescope", cursive;
+  font-size: 1.2em;
+  text-align: center;
+  margin: 1em;
+  color: #121524; // purple; // rgb(84, 87, 95);
+  filter: drop-shadow(0 0.1em 0.2em purple); // red); // rgb(198, 222, 230));
+  // position: relative;
 }
 
 .tarot-card .back:hover {
@@ -125,6 +157,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 18em;
   /* background-color: black; */
   /* background-color: pink; */
   margin-top: 1em;
@@ -211,7 +244,7 @@ body {
   height: 0.4em;
   left: 0.1em;
   bottom: -0.6em;
-  background: black;
+  background: #090a0f;
   box-shadow: 0px 0px 0.15em 0.1em #090a0f;
 }
 
@@ -418,18 +451,36 @@ body {
 
 .curved-div {
   // background: #ff3c00;
-  margin-left: -20em;
-  margin-right: -20em;
-  margin-top: -8em;
+  // margin-left: -20em;
+  // margin-right: -20em;
+  // width: 120%;
+  // margin-bottom: -5em;
+  // margin-left: -5em;
+  margin-top: -2em;
   color: #fff;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   // filter: blur(1.5px);
   filter: drop-shadow(0 0 10px white);
+  // display: contents;
 }
 
-.curved-div svg {
-  display: block;
+footer {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1em;
+  color: white;
+  display: flex;
+  // text-align: center;
+  // align-items: center;
+  justify-content: center;
+  margin-top: 3em;
 }
+
+// .curved-div svg {
+//   display: block;
+// }
 
 // $d: 70; // density
 // $w: 600; // grid size
