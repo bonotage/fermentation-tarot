@@ -1,14 +1,12 @@
 [
-    { "id": "1", "name": "cups", "message": "RWS cups tarot 1 message"},
-    { "id": "2", "name": "wands", "message": "RWS wands tarot 2 message"},
-    { "id": "3", "name": "pentacles", "message": "RWS pentacles tarot 3 message" },
-    {"id": "4", "name": "swords", "message": "RWS swords tarot 4 message"},
-    {"id": "5", "name": "Empress", "message": "fermentation is a process that both begins with, and continually engenders,vital matter: matter that actively alters the world around it."},
-    {"id": "6", "name": "Emperor", "message": "that’s why saccharomyces cerevisiae is used, because it’s such an active fermenter. It’ll just attack and drive out and outcompete most other things."},
+    {"id": "1", "name": "The Magician", "message": "fermentation is a process that both begins with, and continually engenders,vital matter: matter that actively alters the world around it."},
+    {"id": "4", "name": "Emperor", "message": "that’s why saccharomyces cerevisiae is used, because it’s such an active fermenter. It’ll just attack and drive out and outcompete most other things."},
     { "id": "7", "name": "cups", "message": "One cannot help but marvel at the twists and turns of cultural transmission that brought a reincarnation of an obscure and forgotten beverage of ancient China to the grocery shelves of a modern technological society so far removed in time and space from its ancestral home."},
-    { "id": "8", "name": "The Tower", "message": "The material constitution of a sourdough starter will literally change if you move across the country, or across the state, or even down the street: the fermenting body takes in bacteria and yeast from its environment and integrates it into its constitution, becoming something different than it was before."},
+    { "id": "16", "name": "The Tower", "message": "The material constitution of a sourdough starter will literally change if you move across the country, or across the state, or even down the street: the fermenting body takes in bacteria and yeast from its environment and integrates it into its constitution, becoming something different than it was before."},
     { "id": "9", "name": "wands", "message": "Names for Soy Sauce"},
-    { "id": "10", "name": "The Magician", "message": "When someone is born we drink. When someone dies we drink. When someone gets married we drink. You never drink without a purpose."},
-    { "id": "11", "name": "The Star", "message": "What happens if you don't have the Lao Mian starter? ~ Well, we can simply receive some from a neighbor."}
+    { "id": "10", "name": "Something", "message": "When someone is born we drink. When someone dies we drink. When someone gets married we drink. You never drink without a purpose."},
+    { "id": "11", "name": "The Star", "message": "What happens if you don't have the Lao Mian starter? ~ Well, we can simply receive some from a neighbor."},
+    { "id": "3", "name": "The Empress", "message": "Fermentation predigests matter, rendering nutrients more accessible or bioavailable to our bodies to absorb and integrate...fermentation helps [people] nourish themselves and cultivate ways of living that diminish harm to our bodies, to others, and to the world around us."}
+
 ]
 

@@ -1,0 +1,4 @@
+    { "id": "2", "name": "cups", "message": "RWS cups tarot 1 message"},
+    { "id": "8", "name": "wands", "message": "RWS wands tarot 2 message"},
+    { "id": "5", "name": "pentacles", "message": "RWS pentacles tarot 3 message" },
+    {"id": "6", "name": "swords", "message": "RWS swords tarot 4 message"},

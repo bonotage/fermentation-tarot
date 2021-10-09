@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./styles.scss";
+// import { CgCardSpades } from "react-icons/fa";
+// import logo from "./tarot-logo-example.jpg";
 
 const tarots_json = require("./tarots.json");
 var shuffle = require("shuffle-array"),
@@ -14,7 +16,7 @@ const tarots = tarots_json.slice(tarots_json.length - 3);
 
 // references
 // flame: https://codepen.io/dazulu/pen/fGFyj
-//https://freefrontend.com/css-snow-effects/
+//snow: https://freefrontend.com/css-snow-effects/
 
 // const url = "https://pokeres.bastionbot.org/images/pokemon";
 // const url = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/00";
@@ -23,24 +25,6 @@ export default function App() {
   // const [openedCard, setOpenedCard] = useState([]);
   const [openedCard, setOpenedCard] = useState([false, false, false, false]);
   // const [matched, setMatched] = useState([]);
-
-  // const pokemons = [
-  //   { id: 1, name: "balbasaur" },
-  //   { id: 8, name: "wartotle" },
-  //   { id: 9, name: "blastoise" },
-  //   { id: 6, name: "charizard" },
-  // ];
-
-  // const tarots = [
-  //   { id: 1, name: "cups" },
-  //   { id: 2, name: "wands" },
-  //   { id: 3, name: "pentacles" },
-  //   // { id: 4, name: "swords" },
-  // ];
-
-  //currently there are 4 pokemons but we need the pair
-
-  // const pairOfPokemons = [...pokemons, ...pokemons];
 
   function flipCard(index) {
     setOpenedCard((prevState) =>
@@ -72,11 +56,10 @@ export default function App() {
         href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Open+Sans+Condensed:wght@300&display=swap"
         rel="stylesheet"
       ></link>
-
+      {/* componentDidMount(){(document.title = "Fermentation Tarot")} */}
       {[...Array(150)].map((e, i) => (
         <div className="snow" key={i}></div>
       ))}
-
       {/* <div className="wrapper">
           <div className="snow layer1 a"></div>
           <div className="snow layer1"></div>
@@ -86,7 +69,6 @@ export default function App() {
           <div className="snow layer3"></div>
           <div className="text-bg"></div>
         </div> */}
-
       <div className="title-text">Reach for the past...</div>
       {/* <div className="snow"></div> */}
       <div className="content-container">
@@ -151,7 +133,6 @@ export default function App() {
           </div>
         </div>
       </div>
-
       <div class="curved-div">
         {/* <img
           src={`${process.env.PUBLIC_URL}/assets/left-foot.png`}
@@ -166,7 +147,6 @@ export default function App() {
           ></path>
         </svg>
       </div>
-
       <footer> Fermentation Tarot</footer>
     </div>
   );
